@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "../../Team/components/Carousel";
-import bg from "../../../assets/footer_bg.svg";
+import bg from "../../../assets/footer_bg1.png";
+// import bg from "../../../assets/footer_bg.svg";
 import logo from "../../../assets/logo_white.svg";
 
 import { LuPhone, LuMail, LuSend } from "react-icons/lu";

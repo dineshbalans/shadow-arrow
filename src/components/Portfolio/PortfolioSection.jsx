@@ -1,5 +1,6 @@
 import React from "react";
-import background from "../../assets/portfolio_section_bg.svg";
+// import background from "../../assets/portfolio_section_bg.svg";
+import background from "../../assets/portfolio_section_bg1.png";
 import PortFolioCarousel from "./components/PortFolioCarousel";
 import { portfoliosData } from "./data/porfoliosData";
 

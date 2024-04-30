@@ -1,5 +1,6 @@
 import React from "react";
-import bg from "../../assets/testimonial_bg.svg";
+// import bg from "../../assets/testimonial_bg.svg";
+import bg from "../../assets/testimonial_bg1.png";
 import Carousel from "./components/TestimoCarousel";
 
 const TestimonialsSection = () => {
