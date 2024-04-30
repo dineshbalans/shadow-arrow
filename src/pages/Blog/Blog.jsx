@@ -6,6 +6,7 @@ import blogBg from "../Service/assets/servicesBg1.svg";
 import BlogList from "./components/BlogList";
 import ExploreBlogs from "./components/ExploreBlogs";
 import FeaturedBlogs from "./components/FeaturedBlogs";
+import MoreBlogs from "./components/MoreBlogs";
 
 const Blog = () => {
   return (
@@ -19,12 +20,13 @@ const Blog = () => {
           desc="Crafting new bright brands, unique visual systems and digital experience focused on a wide range of original collabs."
           descStyle="text-xl leading-8"
         />
-        <div className="flex justify-between">
+        <div className="flex flex-wrap gap-8 lg:gap-0 justify-between">
           <BlogList />
           <ExploreBlogs />
         </div>
       </div>
       <FeaturedBlogs />
+      <MoreBlogs />
     </section>
   );
 };

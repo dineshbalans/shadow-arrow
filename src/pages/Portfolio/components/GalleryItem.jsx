@@ -10,7 +10,7 @@ const GalleryItem = ({ src, text = "Branding", style, url = "/" }) => {
         className="w-full h-full object-cover object-center rounded-3xl"
       />
       <div
-        className="absolute inset-0 bg-black rounded-3xl bg-opacity-50 opacity-0 group-hover:opacity-100
+        className="absolute inset-0 bg-black rounded-3xl bg-opacity-50 opacity-100 md:opacity-0 group-hover:opacity-100
        flex flex-col items-center justify-center text-white p-16 gap-2 cursor-pointer"
       >
         <p className="text-2xl font-semibold">{text}</p>

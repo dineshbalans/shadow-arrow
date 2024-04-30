@@ -83,8 +83,23 @@
   border rounded transition-all ease-linear;
 }
 
+.paginateBtn {
+  @apply bg-white text-primary px-3 py-1 border border-primary
+  hover:bg-primary hover:text-white transition-all ease-linear;
+}
+.paginateBtnDisabled {
+  @apply bg-white disabled:cursor-not-allowed text-primary/50
+  border border-primary/40  px-3 py-1;
+}
+
+/* Scrollbar: hide */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+/* Scrollbar: show */
+.scrollbar-show::-webkit-scrollbar {
+  display: block;
 }
 
 /* width */
@@ -96,7 +111,7 @@
 /* Track */
 ::-webkit-scrollbar-track {
   background: #dad0cb;
-  border: none; 
+  border: none;
   border-radius: 20px;
 }
 

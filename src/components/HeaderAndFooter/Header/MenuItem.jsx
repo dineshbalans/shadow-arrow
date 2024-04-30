@@ -37,7 +37,7 @@ const MenuItem = ({ id, URL, text, subMenu }) => {
         ) : (
           <h1
             onClick={() => clickHandler(URL)}
-            className="w-fit cursor-pointer"
+            className="w-fit cursor-pointer underline md:no-underline underline-offset-[3px]"
           >
             {text}
           </h1>
@@ -45,7 +45,7 @@ const MenuItem = ({ id, URL, text, subMenu }) => {
       </div>
       {subMenuItems && (
         <ul
-          className={`space-y-5 px-8 py-1 text-2xl ${
+          className={`space-y-5 px-1 md:px-8 py-1 text-xl md:text-2xl ${
             !isSubMenuVisible && "hidden"
           }`}
         >

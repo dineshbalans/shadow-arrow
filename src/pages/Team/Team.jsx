@@ -6,7 +6,6 @@ import teamImage from "./assets/teamImage.svg";
 import teamsBuildingImage from "./assets/teamsBuildingImage.svg";
 import teamBuilding from "./assets/teamBuilding.svg";
 import { teamsData } from "../../components/Team/data/teamsData";
-import Content from "../../components/Team/components/Content";
 import TeamItem from "../../components/Team/components/TeamItem";
 
 const Team = () => {
@@ -20,12 +19,9 @@ const Team = () => {
         ]}
         style="py-8"
       />
-      <div className="px-4 md:px-16 lg:px-9 xl:px-20">
-        <div
-          className=" space-y-12 pt-4 pb-20 
-      flex justify-between items-center"
-        >
-          <div className="w-[43%] space-y-6">
+      <div className="px-4 md:px-16 lg:px-9 xl:px-20 space-y-16">
+        <div className="flex flex-wrap gap-10 lg:gap-0 justify-between">
+          <div className="w-full lg:w-[43%] space-y-6 flex flex-col justify-center">
             <MainContext
               style="space-y-4"
               title="Meet Our Team"
@@ -33,9 +29,9 @@ const Team = () => {
               desc="Discover how our dedicated team champions your service needs with unmatched skills and expertise."
               descStyle="text-xl xl:w-[100%]"
             />
-            <div className="flex justify-cente">
+            <div className="flex justify-center md:justify-start">
               <button
-                className="flex gap-3 items-center border-2 border-primary p-4 rounded-full
+                className="flex gap-3 items-center border-2 border-primary px-3 md:px-4 py-2 md:py-4 rounded-full
             hover:bg-gradient-to-r from-primary via-[#FF294B] to-primary transition-all
             ease-linear shadow-2xl hover:shadow-primary"
               >
@@ -46,13 +42,17 @@ const Team = () => {
               </button>
             </div>
           </div>
-          <div className="w-[55%]">
-            <img src={teamImage} alt="" className="object-contain" />
+          <div className="w-full lg:w-[55%]">
+            <img
+              src={teamImage}
+              alt=""
+              className="object-cover object-center h-full mx-auto"
+            />
           </div>
         </div>
-        <div className="space-y-16">
-          <div className="flex flex-col items-center justify-center text-center space-y-6">
-            <h1 className="text-4xl font-semibold w-[60%] leading-tight">
+        <div className="space-y-16 py-4">
+          <div className="flex flex-col items-center justify-center text-justify md:text-center space-y-6">
+            <h1 className="text-4xl font-semibold w-full md:w-[80%] lg:w-[60%] leading-tight text-center">
               Introducing The core team that powers our Innovative Solutions
             </h1>
             <div className="space-y-5 pt-8">
@@ -67,10 +67,7 @@ const Team = () => {
               </ul>
               <h3 className="text-3xl font-medium">Our Mission</h3>
             </div>
-            <p
-              className="w-[51%]  font-medium
-        "
-            >
+            <p className="w-full mxl:w-[70%] lgl:w-[51%] font-medium">
               At the heart of our service providing company lies a dedicated
               team comprised of highly skilled professionals, each masterful in
               their respective roles. From innovative solution architects and
@@ -78,13 +75,17 @@ const Team = () => {
               customer-oriented service champions
             </p>
           </div>
-          <div className="bg-[#FEF6F2] flex rounded-lg">
-            <div className="w-[47%]">
-              <img src={teamsBuildingImage} alt="" className="object-contain" />
+          <div className="flex flex-wrap rounded-lg bg-[#FEF6F2] gap-10 lg:gap-0 ">
+            <div className="w-full lg:w-[47%]">
+              <img
+                src={teamsBuildingImage}
+                alt=""
+                className="object-cover h-full w-full object-center"
+              />
             </div>
             <div
-              className="w-[53%] flex flex-col justify-center items-center text-center
-              px-12 space-y-4"
+              className="w-full lg:w-[53%] flex flex-col justify-center items-center text-justify md:text-center
+              px-5 md:px-12 space-y-4 py-5 bg-[#FEF6F2] "
             >
               <img
                 src={teamBuilding}
@@ -109,11 +110,11 @@ const Team = () => {
         <h1 className="text-3xl font-bold text-center">
           Our Technical Experts
         </h1>
-        <ul className="relative flex flex-wrap justify-center gap-14 w-full overflow-hidden p-0">
+        <ul className="relative flex flex-wrap justify-center gap-7 lg:gap-9 lgl:gap-10 xl:gap-12 w-full overflow-hidden p-0">
           {teamsData.map(({ id, image, name, designation, socialLinks }) => (
             <TeamItem
               key={id}
-              style="w-[30.2%]"
+              style="w-full md:w-[47%] lg:w-[30.2%]"
               {...{ image, name, designation, socialLinks }}
             />
           ))}

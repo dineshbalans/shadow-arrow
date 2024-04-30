@@ -24,22 +24,23 @@ const BlogItemWTags = ({
         />
       </div>
 
-      <h1 className="text-3xl font-semibold">{title}</h1>
+      <h1 className="text-2xl md:text-3xl font-semibold">{title}</h1>
 
-      <div className="flex justify-between items-center">
+      <div className="flex flex-wrap md:flex-nowrap gap-5 justify-between items-center">
         <div className="flex">
           <h6 className="pr-3 border-r-2 border-primary">{`Written By : ${author}`}</h6>
           <h6 className="pl-3">{date}</h6>
         </div>
-        <ul className="flex gap-3">
-          {tags.map(({ id, tag }) => (
-            <li
-              key={id}
-              className="text-white bg-primary px-2 py-[1px] rounded-full"
-            >
-              {tag}
-            </li>
-          ))}
+        <ul className="flex gap-3 justify-center md:justify-start w-full md:w-auto ">
+          {tags &&
+            tags.map(({ id, tag }) => (
+              <li
+                key={id}
+                className="text-white bg-primary px-2 py-[1px] rounded-full"
+              >
+                {tag}
+              </li>
+            ))}
         </ul>
       </div>
 

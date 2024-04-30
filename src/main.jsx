@@ -12,6 +12,8 @@ import ServicePage from "./pages/Service/Service.jsx";
 import PortfolioPage from "./pages/Portfolio/Portfolio.jsx";
 import BlogPage from "./pages/Blog/Blog.jsx";
 import TeamPage from "./pages/Team/Team.jsx";
+import UiUx from "./pages/Service/pages/UiUx/UiUx.jsx";
+import FramerMotion from "./framer-motion/FramerMotion.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -28,7 +30,16 @@ const routes = createBrowserRouter([
       },
       {
         path: "services",
-        element: <ServicePage />,
+        children: [
+          {
+            index: true,
+            element: <ServicePage />,
+          },
+          {
+            path: "ui-ux",
+            element: <UiUx />,
+          },
+        ],
       },
       {
         path: "portfolio",
@@ -48,8 +59,10 @@ const routes = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Provider store={store}>
-      <RouterProvider router={routes} />
-    </Provider>
+    <FramerMotion>
+      <Provider store={store}>
+        <RouterProvider router={routes} />
+      </Provider>
+    </FramerMotion>
   </React.StrictMode>
 );

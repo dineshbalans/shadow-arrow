@@ -17,7 +17,16 @@ const Breadcrumbs = ({ currentPage, style, bldInPdng = true }) => {
           {currentPage.map(({ URL, text }) => (
             <li className="flex items-center gap-3">
               <FaAngleRight />
-              {URL ? <Link to={URL}>{text}</Link> : <h3>{text}</h3>}
+              {URL ? (
+                <Link
+                  to={URL}
+                  className="hover:text-primary transition-all ease-linear"
+                >
+                  {text}
+                </Link>
+              ) : (
+                <h3>{text}</h3>
+              )}
             </li>
           ))}
         </ul>
